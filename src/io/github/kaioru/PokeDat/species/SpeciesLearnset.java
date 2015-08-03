@@ -24,14 +24,13 @@ package io.github.kaioru.PokeDat.species;
 
 import java.io.Serializable;
 
-
 /**
  * @todo Class Description
  * 
  * @author Kaioru
-**/
+ **/
 public class SpeciesLearnset implements Serializable {
-	
-    private static final long serialVersionUID = 5370581555765470935L;
+
+	private static final long serialVersionUID = 5370581555765470935L;
 
 }

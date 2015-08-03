@@ -28,43 +28,55 @@ import java.io.Serializable;
  * @todo Class Description
  * 
  * @author Kaioru
-**/
+ **/
 public class SpeciesStat implements Serializable {
-	
-    private static final long serialVersionUID = -3825762030465023552L;
-    
-	private int m_HP 		= 0;
-	private int m_Attack 	= 0;
-	private int m_Defense 	= 0;
-	private int m_SpAttack 	= 0;
-	private int m_SpDefense = 0;
-	private int m_Speed 	= 0;
-	
+
+	private static final long serialVersionUID = -3825762030465023552L;
+
+	private int hp = 0;
+	private int attack = 0;
+	private int defense = 0;
+	private int spAttack = 0;
+	private int spDefense = 0;
+	private int speed = 0;
+
 	public enum StatType {
 		HP, ATK, DEF, SPATK, SPDEF, SPD;
 	}
-	
+
 	public int getStat(StatType statType) {
 		switch (statType) {
-			default:
-			case HP: 	return m_HP;
-			case ATK: 	return m_Attack;
-			case DEF: 	return m_Defense;
-			case SPATK: return m_SpAttack;
-			case SPDEF: return m_SpDefense;
-			case SPD: 	return m_Speed;
+		default:
+		case HP:
+			return hp;
+		case ATK:
+			return attack;
+		case DEF:
+			return defense;
+		case SPATK:
+			return spAttack;
+		case SPDEF:
+			return spDefense;
+		case SPD:
+			return speed;
 		}
 	}
-	
+
 	public void setStat(StatType statType, Integer stat) {
 		switch (statType) {
-			default:
-			case HP: 	m_HP = stat;
-			case ATK: 	m_Attack = stat;
-			case DEF: 	m_Defense = stat;
-			case SPATK: m_SpAttack = stat;
-			case SPDEF: m_SpDefense = stat;
-			case SPD: 	m_Speed = stat;
+		default:
+		case HP:
+			hp = stat;
+		case ATK:
+			attack = stat;
+		case DEF:
+			defense = stat;
+		case SPATK:
+			spAttack = stat;
+		case SPDEF:
+			spDefense = stat;
+		case SPD:
+			speed = stat;
 		}
 	}
 

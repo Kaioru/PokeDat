@@ -30,93 +30,92 @@ import io.github.kaioru.PokeDat.species.forme.SpeciesForme;
 import io.github.kaioru.PokeDat.species.forme.SpeciesMegaForme;
 import io.github.kaioru.PokeDat.species.forme.SpeciesNormalForme;
 
-
 /**
  * @todo Class Description
  * 
  * @author Kaioru
-**/
+ **/
 public class SpeciesData implements Serializable {
-	
-    private static final long serialVersionUID = -869191716651946861L;
-    
-    private String 	m_Name;
-    private Integer m_PokedexNationalId;
-    private String 	m_PokedexEntryX, m_PokedexEntryY;
-    
-    private SpeciesNormalForme 				m_NormalForme;
-    private Map<Integer, SpeciesMegaForme> 	m_MegaFormes;
-    private Map<Integer, SpeciesForme> 		m_SpecialFormes;
-    
-    private SpeciesLearnset m_SpeciesLearnSet;
-    
-    public SpeciesData() {
-    	m_MegaFormes 	= new HashMap<>();
-    	m_SpecialFormes 	= new HashMap<>();
-    }
+
+	private static final long serialVersionUID = -869191716651946861L;
+
+	private String name;
+	private Integer pokedexNationalId;
+	private String pokedexEntryX, pokedexEntryY;
+
+	private SpeciesNormalForme normalForme;
+	private Map<Integer, SpeciesMegaForme> megaFormes;
+	private Map<Integer, SpeciesForme> specialFormes;
+
+	private SpeciesLearnset speciesLearnSet;
+
+	public SpeciesData() {
+		megaFormes = new HashMap<>();
+		specialFormes = new HashMap<>();
+	}
 
 	public String getName() {
-	    return m_Name;
-    }
+		return name;
+	}
 
-	public void setName(String speciesName) {
-	    m_Name = speciesName;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	public Integer getPokedexNationalId() {
-	    return m_PokedexNationalId;
-    }
+		return pokedexNationalId;
+	}
 
 	public void setPokedexNationalId(Integer pokedexNationalId) {
-	    m_PokedexNationalId = pokedexNationalId;
-    }
+		this.pokedexNationalId = pokedexNationalId;
+	}
 
 	public String getPokedexEntryX() {
-	    return m_PokedexEntryX;
-    }
+		return pokedexEntryX;
+	}
 
 	public void setPokedexEntryX(String pokedexEntryX) {
-	    m_PokedexEntryX = pokedexEntryX;
-    }
+		this.pokedexEntryX = pokedexEntryX;
+	}
 
 	public String getPokedexEntryY() {
-	    return m_PokedexEntryY;
-    }
+		return pokedexEntryY;
+	}
 
 	public void setPokedexEntryY(String pokedexEntryY) {
-	    m_PokedexEntryY = pokedexEntryY;
-    }
+		this.pokedexEntryY = pokedexEntryY;
+	}
 
 	public SpeciesNormalForme getNormalForme() {
-	    return m_NormalForme;
-    }
+		return normalForme;
+	}
 
 	public void setNormalForme(SpeciesNormalForme normalForme) {
-	    m_NormalForme = normalForme;
-    }
+		this.normalForme = normalForme;
+	}
 
 	public Map<Integer, SpeciesMegaForme> getMegaFormes() {
-	    return m_MegaFormes;
-    }
+		return megaFormes;
+	}
 
 	public void setMegaFormes(Map<Integer, SpeciesMegaForme> megaFormes) {
-	    m_MegaFormes = megaFormes;
-    }
+		this.megaFormes = megaFormes;
+	}
 
 	public Map<Integer, SpeciesForme> getSpecialFormes() {
-	    return m_SpecialFormes;
-    }
+		return specialFormes;
+	}
 
 	public void setSpeciesSpecialFormes(Map<Integer, SpeciesForme> specialFormes) {
-	    m_SpecialFormes = specialFormes;
-    }
+		this.specialFormes = specialFormes;
+	}
 
 	public SpeciesLearnset getSpeciesLearnSet() {
-	    return m_SpeciesLearnSet;
-    }
+		return speciesLearnSet;
+	}
 
 	public void setSpeciesLearnSet(SpeciesLearnset speciesLearnSet) {
-	    m_SpeciesLearnSet = speciesLearnSet;
-    }
+		this.speciesLearnSet = speciesLearnSet;
+	}
 
 }
