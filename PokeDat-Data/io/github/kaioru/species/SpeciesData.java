@@ -20,15 +20,15 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package io.github.kaioru.PokeDat.species;
+package io.github.kaioru.species;
 
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-import io.github.kaioru.PokeDat.species.forme.SpeciesForme;
-import io.github.kaioru.PokeDat.species.forme.SpeciesMegaForme;
-import io.github.kaioru.PokeDat.species.forme.SpeciesNormalForme;
+import io.github.kaioru.species.forme.SpeciesForme;
+import io.github.kaioru.species.forme.SpeciesMegaForme;
+import io.github.kaioru.species.forme.SpeciesNormalForme;
 
 /**
  * @todo Class Description

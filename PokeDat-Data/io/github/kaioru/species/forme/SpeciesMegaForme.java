@@ -1,8 +1,8 @@
-package io.github.kaioru.PokeDat.species.forme;
+package io.github.kaioru.species.forme;
 
 import java.util.List;
 
-import io.github.kaioru.PokeDat.species.SpeciesStat;
+import io.github.kaioru.species.SpeciesStat;
 
 public class SpeciesMegaForme extends SpeciesForme {
 

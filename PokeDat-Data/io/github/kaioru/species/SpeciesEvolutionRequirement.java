@@ -20,64 +20,60 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package io.github.kaioru.PokeDat.species;
+package io.github.kaioru.species;
 
 import java.io.Serializable;
 
-/**
- * @todo Class Description
- * 
- * @author Kaioru
- **/
-public class SpeciesStat implements Serializable {
+public class SpeciesEvolutionRequirement implements Serializable {
 
-	private static final long serialVersionUID = -3825762030465023552L;
+	private static final long serialVersionUID = 3722298010149962328L;
 
-	private int hp = 0;
-	private int attack = 0;
-	private int defense = 0;
-	private int spAttack = 0;
-	private int spDefense = 0;
-	private int speed = 0;
+	private int level;
+	private int item;
+	private int happiness;
+	private int minTimeOfDay, maxTimeOfDay;
+	/*
+	 * Night : >= 20 ; < 4 Morning : >= 4 ; < 10 Day : >= 10 ; < 20
+	 */
 
-	public enum StatType {
-		HP, ATK, DEF, SPATK, SPDEF, SPD;
+	public int getLevel() {
+		return level;
 	}
 
-	public int getStat(StatType statType) {
-		switch (statType) {
-		default:
-		case HP:
-			return hp;
-		case ATK:
-			return attack;
-		case DEF:
-			return defense;
-		case SPATK:
-			return spAttack;
-		case SPDEF:
-			return spDefense;
-		case SPD:
-			return speed;
-		}
+	public void setLevel(int level) {
+		this.level = level;
 	}
 
-	public void setStat(StatType statType, Integer stat) {
-		switch (statType) {
-		default:
-		case HP:
-			hp = stat;
-		case ATK:
-			attack = stat;
-		case DEF:
-			defense = stat;
-		case SPATK:
-			spAttack = stat;
-		case SPDEF:
-			spDefense = stat;
-		case SPD:
-			speed = stat;
-		}
+	public int getItem() {
+		return item;
+	}
+
+	public void setItem(int item) {
+		this.item = item;
+	}
+
+	public int getHappiness() {
+		return happiness;
+	}
+
+	public void setHappiness(int happiness) {
+		this.happiness = happiness;
+	}
+
+	public int getMinTimeOfDay() {
+		return minTimeOfDay;
+	}
+
+	public void setMinTimeOfDay(int minTimeOfDay) {
+		this.minTimeOfDay = minTimeOfDay;
+	}
+
+	public int getMaxTimeOfDay() {
+		return maxTimeOfDay;
+	}
+
+	public void setMaxTimeOfDay(int maxTimeOfDay) {
+		this.maxTimeOfDay = maxTimeOfDay;
 	}
 
 }

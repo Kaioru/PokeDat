@@ -20,60 +20,17 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package io.github.kaioru.PokeDat.species;
+package io.github.kaioru.species;
 
 import java.io.Serializable;
 
-public class SpeciesEvolutionRequirement implements Serializable {
+/**
+ * @todo Class Description
+ * 
+ * @author Kaioru
+ **/
+public class SpeciesLearnset implements Serializable {
 
-	private static final long serialVersionUID = 3722298010149962328L;
-
-	private int level;
-	private int item;
-	private int happiness;
-	private int minTimeOfDay, maxTimeOfDay;
-	/*
-	 * Night : >= 20 ; < 4 Morning : >= 4 ; < 10 Day : >= 10 ; < 20
-	 */
-
-	public int getLevel() {
-		return level;
-	}
-
-	public void setLevel(int level) {
-		this.level = level;
-	}
-
-	public int getItem() {
-		return item;
-	}
-
-	public void setItem(int item) {
-		this.item = item;
-	}
-
-	public int getHappiness() {
-		return happiness;
-	}
-
-	public void setHappiness(int happiness) {
-		this.happiness = happiness;
-	}
-
-	public int getMinTimeOfDay() {
-		return minTimeOfDay;
-	}
-
-	public void setMinTimeOfDay(int minTimeOfDay) {
-		this.minTimeOfDay = minTimeOfDay;
-	}
-
-	public int getMaxTimeOfDay() {
-		return maxTimeOfDay;
-	}
-
-	public void setMaxTimeOfDay(int maxTimeOfDay) {
-		this.maxTimeOfDay = maxTimeOfDay;
-	}
+	private static final long serialVersionUID = 5370581555765470935L;
 
 }

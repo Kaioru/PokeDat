@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package io.github.kaioru.PokeDat.species;
+package io.github.kaioru.species;
 
 import java.io.Serializable;
 
@@ -29,8 +29,55 @@ import java.io.Serializable;
  * 
  * @author Kaioru
  **/
-public class SpeciesLearnset implements Serializable {
+public class SpeciesStat implements Serializable {
 
-	private static final long serialVersionUID = 5370581555765470935L;
+	private static final long serialVersionUID = -3825762030465023552L;
+
+	private int hp = 0;
+	private int attack = 0;
+	private int defense = 0;
+	private int spAttack = 0;
+	private int spDefense = 0;
+	private int speed = 0;
+
+	public enum StatType {
+		HP, ATK, DEF, SPATK, SPDEF, SPD;
+	}
+
+	public int getStat(StatType statType) {
+		switch (statType) {
+		default:
+		case HP:
+			return hp;
+		case ATK:
+			return attack;
+		case DEF:
+			return defense;
+		case SPATK:
+			return spAttack;
+		case SPDEF:
+			return spDefense;
+		case SPD:
+			return speed;
+		}
+	}
+
+	public void setStat(StatType statType, Integer stat) {
+		switch (statType) {
+		default:
+		case HP:
+			hp = stat;
+		case ATK:
+			attack = stat;
+		case DEF:
+			defense = stat;
+		case SPATK:
+			spAttack = stat;
+		case SPDEF:
+			spDefense = stat;
+		case SPD:
+			speed = stat;
+		}
+	}
 
 }
