@@ -8,104 +8,104 @@ public class SpeciesMegaForme extends SpeciesForme {
 
 	private static final long serialVersionUID = -9166137738820533128L;
 
-	private SpeciesNormalForme m_NormalForme;
-	private String m_Ability;
-	private SpeciesStat m_BaseStats;
+	private SpeciesNormalForme normalForme;
+	private String ability;
+	private SpeciesStat baseStats;
 
 	public SpeciesNormalForme getNormalForme() {
-		return m_NormalForme;
+		return normalForme;
 	}
 
 	public void setNormalForme(SpeciesNormalForme normalForme) {
-		m_NormalForme = normalForme;
+		this.normalForme = normalForme;
 	}
 
 	public String getAbility() {
-		return m_Ability;
+		return ability;
 	}
 
 	public void setAbility(String ability) {
-		m_Ability = ability;
+		this.ability = ability;
 	}
 
 	@Override
 	public List<String> getAbilities() {
-		return m_NormalForme.getAbilities();
+		return normalForme.getAbilities();
 	}
 
 	@Override
 	public void setAbilities(List<String> abilities) {
-		m_NormalForme.setAbilities(abilities);
+		this.normalForme.setAbilities(abilities);
 	}
 
 	@Override
 	public List<String> getHiddenAbilities() {
-		return m_NormalForme.getHiddenAbilities();
+		return normalForme.getHiddenAbilities();
 	}
 
 	@Override
 	public void setHiddenAbilities(List<String> hiddenAbilities) {
-		m_NormalForme.setHiddenAbilities(hiddenAbilities);
+		this.normalForme.setHiddenAbilities(hiddenAbilities);
 	}
 
 	@Override
 	public SpeciesStat getBaseStats() {
-		return m_BaseStats;
+		return baseStats;
 	}
 
 	@Override
 	public void setBaseStats(SpeciesStat baseStats) {
-		m_BaseStats = baseStats;
+		this.baseStats = baseStats;
 	}
 
 	@Override
 	public SpeciesStat getEVYield() {
-		return m_NormalForme.getEVYield();
+		return normalForme.getEVYield();
 	}
 
 	@Override
 	public void setEVYield(SpeciesStat evYield) {
-		m_NormalForme.setEVYield(evYield);
+		this.normalForme.setEVYield(evYield);
 	}
 
 	@Override
 	public Short getCaptureRate() {
-		return m_NormalForme.getCaptureRate();
+		return normalForme.getCaptureRate();
 	}
 
 	@Override
 	public void setCaptureRate(Short captureRate) {
-		m_NormalForme.setCaptureRate(captureRate);
+		this.normalForme.setCaptureRate(captureRate);
 	}
 
 	@Override
 	public Short getBaseHappiness() {
-		return m_NormalForme.getBaseHappiness();
+		return normalForme.getBaseHappiness();
 	}
 
 	@Override
 	public void setBaseHappiness(Short baseHappiness) {
-		m_NormalForme.setBaseHappiness(baseHappiness);
+		this.normalForme.setBaseHappiness(baseHappiness);
 	}
 
 	@Override
 	public Short getBaseExperience() {
-		return m_NormalForme.getBaseExperience();
+		return normalForme.getBaseExperience();
 	}
 
 	@Override
 	public void setBaseExperience(Short baseExperience) {
-		m_NormalForme.setBaseExperience(baseExperience);
+		this.normalForme.setBaseExperience(baseExperience);
 	}
 
 	@Override
 	public String getGrowthRate() {
-		return m_NormalForme.getGrowthRate();
+		return normalForme.getGrowthRate();
 	}
 
 	@Override
 	public void setGrowthRate(String growthRate) {
-		m_NormalForme.setGrowthRate(growthRate);
+		this.normalForme.setGrowthRate(growthRate);
 	}
 
 }
