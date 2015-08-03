@@ -12,5 +12,9 @@
 hs_err_pid*
 /bin/
 
+# Eclipse
+*.project
+*.classpath
+
 # OS X
-.DS_Store
+*.DS_Store
