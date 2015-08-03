@@ -30,6 +30,8 @@ import java.net.URLConnection;
 import java.util.Map;
 import java.util.Optional;
 
+import org.apache.commons.lang3.StringUtils;
+
 import io.github.kaioru.species.SpeciesData;
 
 public class PokemonDBCrawler extends Crawler {
@@ -74,6 +76,21 @@ public class PokemonDBCrawler extends Crawler {
 	}
 
 	@Override
+	public Optional<SpeciesData> crawl(URL url) {
+		String raw = "";
+
+		try {
+			URLConnection con = url.openConnection();
+			BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+
+			in.lines().forEach(s -> raw.concat(s));
+			in.close();
+		} catch (IOException e) {
+		}
+		return crawl(raw);
+	}
+
+	@Override
 	public Optional<SpeciesData> crawl(String raw) {
 		try {
 			SpeciesData sd = new SpeciesData();
@@ -87,8 +104,33 @@ public class PokemonDBCrawler extends Crawler {
 	}
 
 	@Override
-	public boolean fillMap(Map<Integer, Optional<SpeciesData>> map) {
-		// TODO Auto-generated method stub
+	public boolean crawlEverything(Map<Integer, SpeciesData> map) {
+		try {
+			URL url = new URL(POKEMON_PAGE_LIST);
+			URLConnection con = url.openConnection();
+			BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+
+			in.lines().forEach(s -> {
+				if (s.contains(POKEMON_PAGE_START)) {
+					try {
+						URL pkmn = new URL(POKEMON_DATABASE
+								+ StringUtils.substringBetween(s, POKEMON_PAGE_START, POKEMON_PAGE_END));
+						Optional<SpeciesData> opt = crawl(pkmn);
+
+						if (opt.isPresent()) {
+							SpeciesData sd = opt.get();
+							
+							map.put(sd.getPokedexNationalId(), sd);
+						}
+					} catch (Exception e) {
+					}
+				}
+			});
+			in.close();
+
+			return true;
+		} catch (IOException e) {
+		}
 		return false;
 	}
 

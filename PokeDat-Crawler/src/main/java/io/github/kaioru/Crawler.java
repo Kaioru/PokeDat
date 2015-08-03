@@ -22,6 +22,7 @@
  */
 package io.github.kaioru;
 
+import java.net.URL;
 import java.util.Map;
 import java.util.Optional;
 
@@ -30,9 +31,11 @@ import io.github.kaioru.species.SpeciesData;
 public abstract class Crawler {
 
 	public abstract Optional<SpeciesData> crawl(Integer pkmn);
+	
+	public abstract Optional<SpeciesData> crawl(URL url);
 
 	public abstract Optional<SpeciesData> crawl(String raw);
 
-	public abstract boolean fillMap(Map<Integer, Optional<SpeciesData>> map);
+	public abstract boolean crawlEverything(Map<Integer, SpeciesData> map);
 
 }
